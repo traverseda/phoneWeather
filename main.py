@@ -7,7 +7,7 @@ from kivy.uix.button import Button
 from kivy.uix.label import Label
 from kivy.metrics import dp
 from kivy.utils import platform
-import service
+from service import main as service
 from kivy.clock import Clock
 from kivy.lib import osc
 from kivy.lang import Builder
@@ -49,7 +49,7 @@ class TestApp(App):
     def build(self):
         if platform == 'android':
             from android import AndroidService
-            service = AndroidService('my pong service', 'running')
+            service = AndroidService('alex\'s time service', 'running')
             service.start('service started')
             self.service = service
 
